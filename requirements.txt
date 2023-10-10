@@ -1,2 +1,2 @@
-yt-dlp==2022.12.1  # Assuming this version as of the last update in my training data. You might want to use a newer version if available.
+yt-dlp==2022.12.1  
 moviepy==1.0.3    # Again, use the latest stable version when you set this up.
