@@ -29,7 +29,7 @@ def download_clip(url):
         'format': 'bestvideo+bestaudio/best',  # Adjusted this line to select the best available format
         'outtmpl': TEMP_VIDEO_FILENAME,
         'postprocessors': [],
-        'logger': MyLogger(),
+        #'logger': MyLogger(),#
         'progress_hooks': [hook],
     }
 
