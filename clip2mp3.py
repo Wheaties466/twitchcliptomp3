@@ -22,13 +22,16 @@ def is_video_file(filename):
                 return True
     return False
 
-def download_clip(url, filename="clip.mp4"):
+def download_clip(url):
     ydl_opts = {
-        'format': 'bestvideo[ext=mp4]',  # download the best mp4 format available
-        'outtmpl': filename,             # name of the file
+        'format': 'bestvideo+bestaudio/best',  # Adjusted this line to select the best available format
+        'outtmpl': TEMP_VIDEO_FILENAME,
+        'postprocessors': [],
+        'logger': MyLogger(),
+        'progress_hooks': [hook],
     }
 
-    with youtube_dl.YoutubeDL(ydl_opts) as ydl:
+    with yt_dlp.YoutubeDL(ydl_opts) as ydl:
         ydl.download([url])
 
 def convert_to_mp3(video_filename, audio_filename="output.mp3"):
