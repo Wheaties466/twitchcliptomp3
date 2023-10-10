@@ -2,7 +2,10 @@ import yt_dlp as youtube_dl
 from moviepy.editor import *
 import sys
 import os
+import rev
+import yt_dlp
 import re
+from pydub import AudioSegment
 
 TEMP_VIDEO_FILENAME = "temp_video.mp4"\
 
