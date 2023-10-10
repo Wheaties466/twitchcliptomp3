@@ -4,6 +4,8 @@ import sys
 import os
 import re
 
+TEMP_VIDEO_FILENAME = "temp_video.mp4"\
+
 def is_valid_twitch_url(url):
     # Check if it's a Twitch clip URL format (this can change based on Twitch's URL scheme)
     pattern = re.compile(r'^https://clips\.twitch\.tv/[A-Za-z0-9]+')
