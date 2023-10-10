@@ -30,7 +30,7 @@ def download_clip(url):
         'outtmpl': TEMP_VIDEO_FILENAME,
         'postprocessors': [],
         #'logger': MyLogger(),#
-        'progress_hooks': [hook],
+        #'progress_hooks': [hook],
     }
 
     with yt_dlp.YoutubeDL(ydl_opts) as ydl:
