@@ -6,7 +6,7 @@ import yt_dlp
 import re
 from pydub import AudioSegment
 
-TEMP_VIDEO_FILENAME = "temp_video.mp4"\
+TEMP_VIDEO_FILENAME = "temp_video.mp4"
 
 def is_valid_twitch_url(url):
     # Check if it's a Twitch clip URL format (this can change based on Twitch's URL scheme)
@@ -55,7 +55,7 @@ if __name__ == "__main__":
 
     download_clip(url)
 
-    if not is_video_file("TEMP_VIDEO_FILENAME"):
+    if not is_video_file(TEMP_VIDEO_FILENAME):
         print("Downloaded file is not a valid video format.")
         os.remove("TEMP_VIDEO_FILENAME")
         sys.exit(1)
