@@ -57,8 +57,8 @@ if __name__ == "__main__":
 
     if not is_video_file(TEMP_VIDEO_FILENAME):
         print("Downloaded file is not a valid video format.")
-        os.remove("TEMP_VIDEO_FILENAME")
+        os.remove(TEMP_VIDEO_FILENAME)
         sys.exit(1)
 
-    convert_to_mp3("TEMP_VIDEO_FILENAME")
+    convert_to_mp3(TEMP_VIDEO_FILENAME)
     print("Conversion done. Check output.mp3 for the audio!")
