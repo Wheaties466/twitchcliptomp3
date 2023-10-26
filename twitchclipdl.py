@@ -3,6 +3,7 @@ import sys
 import os
 import re
 
+OUTPUT_DIR = "output"
 TEMP_VIDEO_FILENAME = "temp_video.mp4"
 
 def is_valid_twitch_url(url):
@@ -37,7 +38,11 @@ if __name__ == "__main__":
         print("Couldn't fetch the title for the clip.")
         sys.exit(1)
     
-    output_filename = f"{title}.mp4".replace(" ", "_")  # Replacing spaces with underscores for filename
+    # Check for the output directory and create it if it doesn't exist
+    if not os.path.exists(OUTPUT_DIR):
+        os.makedirs(OUTPUT_DIR)
+    
+    output_filename = f"{OUTPUT_DIR}/{title}.mp4".replace(" ", "_")  # Replacing spaces with underscores for filename
     
     os.rename(TEMP_VIDEO_FILENAME, output_filename)  # Renaming the temporary file to the title of the clip
 
